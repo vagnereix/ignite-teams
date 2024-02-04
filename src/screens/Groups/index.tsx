@@ -13,17 +13,20 @@ export function Groups() {
   return (
     <Container>
       <Header />
-      <Highlight title='Turmas' subtitle='Jogue com a sua turma' />
+      <Highlight title='Times' subtitle='Jogue com a sua turma' />
 
       <FlatList
         data={groups}
         keyExtractor={(item, _) => item}
+        showsVerticalScrollIndicator={false}
         renderItem={({ item }) => <GroupCard title={item} />}
-        ListEmptyComponent={() => <ListEmpty message='Que tal cadastrar a primeira turma?' />}
+        ListEmptyComponent={() => (
+          <ListEmpty message='Que tal cadastrar o primeiro time?' />
+        )}
         contentContainerStyle={!groups.length && { flex: 1 }}
       />
 
-      <Button title='Criar nova turma' />
+      <Button title='Criar novo time' />
     </Container>
   );
 }

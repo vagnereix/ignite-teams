@@ -13,18 +13,18 @@ export function NewGroup() {
         <Icon />
 
         <Highlight
-          title='Nova turma'
-          subtitle='Crie uma nova turma para começar a organizar suas atividades.'
+          title='Novo time'
+          subtitle='Crie um novo time para começar a organizar suas atividades.'
         />
 
         <Input
-          placeholder='Nome da turma'
+          placeholder='Nome do time'
           style={{
             marginBottom: 20,
           }}
         />
 
-        <Button title='Criar turma' />
+        <Button title='Criar time' />
       </Content>
     </Container>
   );
