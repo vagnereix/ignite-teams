@@ -1,6 +1,8 @@
-import { Header } from "@/components/Header";
-import { Container } from "./style";
-import { Highlight } from "@/components/Highlight";
+import { Header } from '@/components/Header';
+import { Container, Form } from './style';
+import { Highlight } from '@/components/Highlight';
+import { ButtonIcon } from '@/components/ButtonIcon';
+import { Input } from '@/components/Input';
 
 export function Players() {
   return (
@@ -8,9 +10,14 @@ export function Players() {
       <Header showBackButton />
 
       <Highlight
-        title="Nome da turma"
-        subtitle="Adicione a galera e separe os times"
+        title='Nome da turma'
+        subtitle='Adicione a galera e separe os times'
       />
+
+      <Form>
+        <Input placeholder='Digite o nome do jogador' autoCorrect={false} />
+        <ButtonIcon icon='add' variant='primary' />
+      </Form>
     </Container>
-  )
+  );
 }

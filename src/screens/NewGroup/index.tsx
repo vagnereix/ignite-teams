@@ -1,8 +1,8 @@
-import { Header } from "@/components/Header";
-import { Container, Content, Icon } from "./styles";
-import { Highlight } from "@/components/Highlight";
-import { Button } from "@/components/Button";
-import { Input } from "@/components/Input";
+import { Header } from '@/components/Header';
+import { Container, Content, Icon } from './styles';
+import { Highlight } from '@/components/Highlight';
+import { Button } from '@/components/Button';
+import { Input } from '@/components/Input';
 
 export function NewGroup() {
   return (
@@ -13,14 +13,19 @@ export function NewGroup() {
         <Icon />
 
         <Highlight
-          title="Nova turma"
-          subtitle="Crie uma nova turma para começar a organizar suas atividades."
+          title='Nova turma'
+          subtitle='Crie uma nova turma para começar a organizar suas atividades.'
         />
 
-        <Input placeholder="Nome da turma" />
+        <Input
+          placeholder='Nome da turma'
+          style={{
+            marginBottom: 20,
+          }}
+        />
 
-        <Button title="Criar turma" />
+        <Button title='Criar turma' />
       </Content>
     </Container>
-  )
+  );
 }

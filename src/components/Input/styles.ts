@@ -12,7 +12,6 @@ export const Container = styled(TextInput).attrs(
 
   padding: 16px;
   border-radius: 6px;
-  margin-bottom: 20px;
 
   ${({ theme }) => css`
     color: ${theme.COLORS.WHITE};
