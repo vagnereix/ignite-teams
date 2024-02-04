@@ -6,6 +6,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import theme from '@/theme';
 
 import { Loading } from '@/components/Loading';
+import { NewGroup } from '@/screens/NewGroup';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -16,7 +17,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="inverted" />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <NewGroup /> : <Loading />}
     </ThemeProvider>
   );
 }
