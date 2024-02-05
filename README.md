@@ -19,3 +19,7 @@
     },
     ```
 - Apagar a pasta `node_modules` e reinstalar dependências.
+
+## React Navigation
+
+- É importante notar que o fato de utilizar o `NavigationContainer` por volta das rotas da aplicação, nos permite ter acesso ao navigate do `useNagivation` através das `props` dos nossos componentes/rotas.

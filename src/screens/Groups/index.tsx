@@ -6,12 +6,20 @@ import { useState } from 'react';
 import { FlatList } from 'react-native';
 import { ListEmpty } from '@/components/ListEmpty';
 import { Button } from '@/components/Button';
-import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-export function Groups() {
+type RootParamList = {
+  groups: undefined;
+  new: undefined;
+  players: { group: string };
+};
+
+type GroupsProps = {
+  navigation: NativeStackNavigationProp<RootParamList, 'groups'>;
+};
+
+export function Groups({ navigation: { navigate } }: GroupsProps) {
   const [groups, setGroups] = useState<string[]>([]);
-
-  const { navigate } = useNavigation();
 
   function handleNewTeam() {
     navigate('new');
