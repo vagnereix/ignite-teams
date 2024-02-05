@@ -9,17 +9,26 @@ import { useState } from 'react';
 import { PlayerCard } from '@/components/PlayerCard';
 import { ListEmpty } from '@/components/ListEmpty';
 import { Button } from '@/components/Button';
+import { RouteProp, useRoute } from '@react-navigation/native';
+
+type PlayersParams = {
+  group: string;
+};
+
+type PlayersRoute = RouteProp<Record<string, PlayersParams>, string>;
 
 export function Players() {
   const [selectedTeam, setSelectedTeam] = useState('Time A');
   const [players, setPlayers] = useState(['Vagner', 'Reis']);
+
+  const { params } = useRoute<PlayersRoute>();
 
   return (
     <Container>
       <Header showBackButton />
 
       <Highlight
-        title='Nome do time'
+        title={params.group}
         subtitle='Adicione a galera e separe os times'
       />
 

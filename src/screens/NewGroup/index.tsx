@@ -4,12 +4,14 @@ import { Highlight } from '@/components/Highlight';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
 
 export function NewGroup() {
   const { navigate } = useNavigation();
+  const [group, setGroup] = useState('');
 
   function handleNewTeam() {
-    navigate('players', { group: 'New group' });
+    navigate('players', { group });
   }
 
   return (
@@ -26,6 +28,7 @@ export function NewGroup() {
 
         <Input
           placeholder='Nome do time'
+          onChangeText={setGroup}
           style={{
             marginBottom: 20,
           }}
