@@ -22,4 +22,5 @@
 
 ## React Navigation
 
-- É importante notar que o fato de utilizar o `NavigationContainer` por volta das rotas da aplicação, nos permite ter acesso ao navigate do `useNagivation` através das `props` dos nossos componentes/rotas.
+- É importante notar que o fato de utilizar o `NavigationContainer` por volta das rotas da aplicação, nos permite ter acesso ao navigate do `useNagivation` através das `props` dos nossos componentes/rotas;
+- O React Native recomenda utilizar a função `navigate` quando queremos retornar para a página inicial do app, mas também disponibiliza a função `backToTop` caso queiramos deixar isso mais claro no código.
